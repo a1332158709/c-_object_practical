@@ -37,7 +37,7 @@ void func2(Figure &p)
 }
 int main()
 {
-	Sphere c(1.0);
+    Sphere c(1.0);
     cout<<"球体的表面积是:"<<endl;
     func1(c);
     cout<<"球体的体积是:"<<endl;
@@ -47,5 +47,5 @@ int main()
     func1(d);
     cout<<"圆柱体的体积是:"<<endl;
     func2(d);
-	return 0;
+    return 0;
 }
