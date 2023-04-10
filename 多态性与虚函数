@@ -39,7 +39,7 @@ int main()
 {
     Sphere c(1.0);
     cout<<"球体的表面积是:"<<endl;
-    func1(c);
+    func1(c); 
     cout<<"球体的体积是:"<<endl;
     func2(c);
     Column d(1.0,2.0);
