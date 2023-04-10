@@ -1,9 +1,7 @@
-//³ÌĞòLi5_3.cpp
-//¶¯Ì¬Áª±à
 #include <iostream>
 const double PI=3.14;
 using namespace std;
-class Figure                       //¶¨Òå»ùÀà
+class Figure                       //å®šä¹‰åŸºç±»
 {    
     public:
         Figure(){};
@@ -12,36 +10,37 @@ class Figure                       //¶¨Òå»ùÀà
 	protected:
 		double radius;
 };
-class Sphere : public Figure           //¶¨ÒåÇòÌåÅÉÉúÀà£¬¹«ÓĞ¼Ì³Ğ·½Ê½
+class Sphere : public Figure           //å®šä¹‰çƒä½“æ´¾ç”Ÿç±»ï¼Œå…¬æœ‰ç»§æ‰¿æ–¹å¼
 {                       
     public:                                    
         Sphere(double r){radius=r;}
-		virtual double area()  {return 4*PI*radius*radius;}//ÇóÇòÌåµÄ±íÃæ»ı 
-		virtual double volume() { return 3.0/4*PI*radius*radius*radius; } //ÇóÇòÌåµÄÌå»ı 
+		virtual double area()  {return 4*PI*radius*radius;}//æ±‚çƒä½“çš„è¡¨é¢ç§¯ 
+		virtual double volume() { return 4.0/3*PI*radius*radius*radius; } //æ±‚çƒä½“çš„ä½“ç§¯ 
 		
 };
-class Column : public Figure           //¶¨ÒåÔ²ÖùÌåÅÉÉúÀà£¬¹«ÓĞ¼Ì³Ğ·½Ê½
+class Column : public Figure           //å®šä¹‰åœ†æŸ±ä½“æ´¾ç”Ÿç±»ï¼Œå…¬æœ‰ç»§æ‰¿æ–¹å¼
 {                       
     public:                                    
         Column(double r,double high){radius=r;h=high;}
-		virtual double area() {return (2*PI*radius*radius)+(PI*r*h);}  //ÇóÔ²ÖùÌåµÄ±íÃæ»ı 
-		virtual double volume() { return PI*radius*h; }     //ÇóÔ²ÖùÌåµÄÌå»ı 
+		virtual double area() {return (2*PI*radius*radius)+(PI*r*h);}  //æ±‚åœ†æŸ±ä½“çš„è¡¨é¢ç§¯ 
+		virtual double volume() { return PI*radius*h; }     //æ±‚åœ†æŸ±ä½“çš„ä½“ç§¯ 
 	protected:
 		double h;
 };
-void func(Figure &p)//ĞÎ²ÎÎª»ùÀàµÄÒıÓÃ
+void func(Figure &p)//å½¢å‚ä¸ºåŸºç±»çš„å¼•ç”¨
 {
 	cout<<p.area()<<endl;
+	
 }
 double main()
 {
-	Figure fig;
+    Figure fig;
     cout<<"Area of  is Figure is ";
     func(fig);
-	Circle  c(3.0); // CircleÅÉÉúÀà¶ÔÏó
+	Circle  c(3.0); // Circleæ´¾ç”Ÿç±»å¯¹è±¡
     cout<<"Area of circle is ";
     func(c);
-    Rectangle rec(4.0,5.0);// RectangleÅÉÉúÀà¶ÔÏó
+    Rectangle rec(4.0,5.0);// Rectangleæ´¾ç”Ÿç±»å¯¹è±¡
 	cout<<"Area of rectangle is ";
     func(rec);
 	return 0;
