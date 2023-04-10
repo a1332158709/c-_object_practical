@@ -30,6 +30,8 @@ class Column : public Figure           //定义圆柱体派生类，公有继承
 void func(Figure &p)//形参为基类的引用
 {
 	cout<<p.area()<<endl;
+	cout<<p.volume()<<endl;
+	
 	
 }
 double main()
