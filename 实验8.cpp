@@ -3,16 +3,13 @@ using namespace std;
 class teacher{
 public:
     teacher()  {}
-    virtual int printf_salary()
-    {
-       return salary;
-    }
+    virtual int printf_salary() = 0;
 protected:
     int regular;
     int hours;
     int salary;
 };
-class professor :public teacher{                         //¶¨Òå½ÌÊÚÀà
+class professor :public teacher{                         //å®šä¹‰æ•™æˆç±»
 public:
     professor (int level,int hours)
     {
@@ -64,18 +61,18 @@ class lecturer:public teacher
 int main()
 {
     int L1,L2,h1,h2,h;
-    cout<<"ÇëÊäÈë½ÌÊÚµÄµÈ¼¶£¬¿ÎÊ±¸öÊı"<<endl;
+    cout<<"è¯·è¾“å…¥æ•™æˆçš„ç­‰çº§ï¼Œè¯¾æ—¶ä¸ªæ•°"<<endl;
     cin>>L1>>h1;
     professor p1(L1,h1);
-    cout<<"½ÌÊÚµÄ¹¤×ÊÎª:";  func(p1);
-    cout<<"ÇëÊäÈë¸±½ÌÊÚµÄµÈ¼¶£¬¿ÎÊ±¸öÊı"<<endl;
+    cout<<"æ•™æˆçš„å·¥èµ„ä¸º:";  func(p1);
+    cout<<"è¯·è¾“å…¥å‰¯æ•™æˆçš„ç­‰çº§ï¼Œè¯¾æ—¶ä¸ªæ•°"<<endl;
     cin>>L2>>h2;
     associate_professor p2(L2,h2);
-    cout<<"¸±½ÌÊÚµÄ¹¤×ÊÎª:";  func(p2);
-    cout<<"ÇëÊäÈë½²Ê¦µÄ¿ÎÊ±¸öÊı:"<<endl;
+    cout<<"å‰¯æ•™æˆçš„å·¥èµ„ä¸º:";  func(p2);
+    cout<<"è¯·è¾“å…¥è®²å¸ˆçš„è¯¾æ—¶ä¸ªæ•°:"<<endl;
     cin>>h;
     lecturer p3(h);
-    cout<<"½²Ê¦µÄ¹¤×ÊÎª:";  func(p3);
+    cout<<"è®²å¸ˆçš„å·¥èµ„ä¸º:";  func(p3);
     return 0;
 }
 
